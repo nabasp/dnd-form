@@ -13,6 +13,7 @@ import {
 import { useState } from "react";
 import { Button } from "./components/ui/button";
 import { Edit2Icon, Lock } from "lucide-react";
+import { Card } from "./components/ui/card";
 
 function App() {
   const [editMode, setEditMode] = useState<boolean>(true);
@@ -72,18 +73,20 @@ function App() {
   return (
     <DragDropProvider onDragEnd={onDragEnd}>
       <div className="w-full h-full flex flex-col gap-4 p-4">
-        <nav className="flex items-center justify-center w-full gap-5">
+        <nav className="flex items-center justify-center w-full gap-5 h-20">
           <h1 className="text-2xl font-bold">Drag & Drop Canvas</h1>
           <Button onClick={() => setEditMode(!editMode)}>
             {editMode ? <Lock /> : <Edit2Icon />}
           </Button>
         </nav>
         <main className="w-full h-full flex gap-4 p-4">
-          <aside className="sticky top-0 h-[100vh] flex flex-col gap-4 p-4 border border-gray-500 w-[20rem] items-center overflow-scroll">
-            <h4 className="text-2xl font-bold">Component</h4>
-            <ToolBar />
+          <aside>
+            <Card className="sticky top-0 h-[70vh] flex flex-col gap-4 p-4 w-[20rem] items-center overflow-scroll">
+              <h4 className="text-2xl font-bold">Component</h4>
+              <ToolBar />
+            </Card>
           </aside>
-          <section className="flex-1 border border-gray-500 overflow-scroll">
+          <section className="flex-1 rounded-2xl bg-white overflow-scroll">
             <Canvas id="canvas">
               <BasicGrid
                 layout={droppedItems}

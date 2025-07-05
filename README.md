@@ -6,7 +6,7 @@ A drag-and-drop UI builder app built using modern React tools including **React 
 
 ## 🖥️ Deployed Demo
 
-🌐 Live preview: [https://dnd-react-app-demo.vercel.app](https://dnd-react-app-demo.vercel.app)
+🌐 Live preview: [https://react-dnd-form-seven.vercel.app/](https://react-dnd-form-seven.vercel.app/)
 
 > _Built and deployed using [Vercel](https://vercel.com/)_
 

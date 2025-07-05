@@ -3,7 +3,6 @@ import "react-grid-layout/css/styles.css";
 import "react-resizable/css/styles.css";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
-import { Switch } from "../ui/switch";
 import { Label } from "../ui/label";
 import { TableDemo } from "../DemoTable";
 import type { DroppedItem } from "@/store/slice";
@@ -13,6 +12,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@radix-ui/react-tooltip";
+import { SwitchDemo } from "../SwitchDemo";
 
 const ReactGridLayout = WidthProvider(Responsive);
 const componentWrapperStyle =
@@ -90,7 +90,7 @@ const BasicGrid = ({
         return (
           <div key={item.i} data-grid={item} className={componentWrapperStyle}>
             <ComponentWrapper id={item.i}>
-              <Switch id={`switch-${item.i}`} />
+              <SwitchDemo />
             </ComponentWrapper>
           </div>
         );
